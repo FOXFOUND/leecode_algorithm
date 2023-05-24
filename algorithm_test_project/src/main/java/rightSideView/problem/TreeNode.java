@@ -1,9 +1,9 @@
-package delNodes.problem;
+package rightSideView.problem;
 
 public class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
+    int val;
+    TreeNode left;
+    TreeNode right;
 
     TreeNode() {
     }
