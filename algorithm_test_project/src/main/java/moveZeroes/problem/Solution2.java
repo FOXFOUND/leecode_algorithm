@@ -5,18 +5,21 @@ class Solution2 {
         int n = nums.length, left = 0, right = 0;
         while (right < n) {
             if (nums[right] != 0) {
-                swap(nums, left, right);
+
+                /**
+                 * 左指针左边均为非零数；
+                 *
+                 * 右指针左边直到左指针处均为零。
+                 */
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
                 left++;
             }
             right++;
         }
     }
 
-    public void swap(int[] nums, int left, int right) {
-        int temp = nums[left];
-        nums[left] = nums[right];
-        nums[right] = temp;
-    }
 }
 
 //作者：LeetCode-Solution
