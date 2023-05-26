@@ -8,6 +8,7 @@ public class Lunliu {
 
     public void printabc(String name, int target) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
+            //利用synchronized进行临界区的控制,利用num%3进行判断是否执行当前线程,不执行的话,继续wait进行释放锁,可以执行线程继续执行
             synchronized (lock) {
                 while (num % 3 != target) {
                     lock.wait();

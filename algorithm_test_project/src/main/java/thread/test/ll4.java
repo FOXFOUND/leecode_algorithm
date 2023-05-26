@@ -14,13 +14,16 @@ public class ll4 {
 
     public void printabc(String name, int target, Condition c, Condition next) throws InterruptedException {
         for (int i = 0; i < 10; ) {
+            //利用锁控制临界区
             lock.lock();
+            //利用condition的FIFO的waiter_node进行等待
             while (num % 3 != target) {
                 c.await();
             }
             num++;
             i++;
             System.out.println(name);
+            //使用的前提必须获取锁lock
             next.signal();
             lock.unlock();
         }

@@ -26,6 +26,7 @@ public class ll2 {
     }
 
     public static void main(String[] args) throws InterruptedException {
+        //相当于10 组 3个线程,
         for (int i = 0; i < 10; i++) {
             Thread a = new Thread(new p(null), "A");
             Thread b = new Thread(new p(a), "B");

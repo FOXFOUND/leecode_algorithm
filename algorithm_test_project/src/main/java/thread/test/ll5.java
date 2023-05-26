@@ -11,6 +11,7 @@ public class ll5 {
 
     public void printabc(String name, Semaphore c, Semaphore next) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
+            //利用信号量
             c.acquire();
             System.out.println(name);
             next.release();
