@@ -1,7 +1,7 @@
 package reverseKGroup.problem;
 
 public class ListNode {
-    int val;
+    public  int val;
     public ListNode next;
 
     ListNode() {
