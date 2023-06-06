@@ -1,6 +1,13 @@
 package thread.test;
 
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -27,6 +34,10 @@ public class ll4 {
             next.signal();
             lock.unlock();
         }
+
+//        ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(2);
+//        threadPoolExecutor.submit();
+
     }
 
     public static void main(String[] args) {
